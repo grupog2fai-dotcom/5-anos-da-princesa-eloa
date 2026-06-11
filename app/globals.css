@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@theme {
+  --font-cinzel: var(--font-cinzel), serif;
+  --font-cormorant: var(--font-cormorant), serif;
+
+  --color-imperial: #5A2D82;
+  --color-orquidea: #A04BC7;
+  --color-dourado-prem: #C8A45A;
+  --color-ouro-real: #D4AF37;
+  --color-perolado: #F7F3EE;
+  --color-marfim: #EFE7DB;
+  --color-champagne: #E7D5B5;
+}
+
+/* Custom premium scrollbar and golden text effects */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F7F3EE;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C8A45A;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
+/* Background Premium Dot Pattern */
+.bg-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.05;
+  background-image: radial-gradient(#C8A45A 1px, transparent 1px);
+  background-size: 30px 30px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Sleek Dual Frame Border */
+.sleek-frame-border {
+  position: absolute;
+  inset: 15px;
+  border: 2px solid #C8A45A;
+  pointer-events: none;
+  z-index: 40;
+}
+
+.sleek-frame-border::after {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  border: 1px solid #C8A45A;
+  opacity: 0.5;
+}
+
+/* Elegant Ornaments & Dividers */
+.sleek-ornament {
+  width: 120px;
+  height: 2px;
+  background: #C8A45A;
+  margin: 20px auto;
+  position: relative;
+}
+
+.sleek-ornament::before {
+  content: '◈';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #F7F3EE;
+  padding: 0 10px;
+  color: #C8A45A;
+  font-size: 14px;
+}
+
+.gold-foil-text {
+  background: linear-gradient(135deg, #C8A45A 0%, #D4AF37 50%, #F5E3B5 75%, #C8A45A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: shine 6s linear infinite;
+}
+
+.gold-foil-border {
+  border: 2px solid transparent;
+  background-image: linear-gradient(#F7F3EE, #F7F3EE), linear-gradient(135deg, #C8A45A 0%, #D4AF37 50%, #F5E3B5 75%, #C8A45A 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.gold-foil-card {
+  border: 1px solid transparent;
+  background-image: linear-gradient(#ffffff, #fdfbfa), linear-gradient(135deg, #C8A45A 0%, #D4AF37 40%, #E7D5B5 70%, #C8A45A 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Soft gold particle effect styling */
+.particle {
+  position: absolute;
+  background: radial-gradient(circle, rgba(212,175,55,0.8) 0%, rgba(212,175,55,0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
