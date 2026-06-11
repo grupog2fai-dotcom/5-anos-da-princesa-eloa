@@ -1,0 +1,6 @@
+{
+  "name": "Convite Princesa Eloá",
+  "description": "Convite digital de luxo para a festa de 5 anos da Princesa Eloá.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
